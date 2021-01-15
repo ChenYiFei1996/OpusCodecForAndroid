@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.cyf.opuscodec" >
+<!--    使用NDK生成so库时设置sdk最低版本及目标版本，防止报错（此报错可忽略）-->
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22"/>
+
+
+</manifest>

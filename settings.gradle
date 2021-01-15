@@ -1,0 +1,3 @@
+include ':app',
+        ':opus-codec'
+rootProject.name = "OpusCodecDemo"

@@ -1,0 +1,22 @@
+libopus为opus官方提供的1.3.1版本，官方地址：https://opus-codec.org/
+
+本工具类目前仅使用官方库实现了opus音频（去掉Oggs头的纯音频数据）的解码
+
+以下为使用NDK生成so库的命令配置，使用CMake生成时无需使用以下命令
+javah配置:
+        Program: $JDKPath$\bin\javah
+        Arguments: -classpath $ContentRoot$\src\main\java -jni -d $ContentRoot$\src\main\jni $FileClass$
+        Working Directory: $FileDir$
+ndk-build配置:
+        Program: $NDKPath&\ndk-build.cmd
+        Arguments:
+        Working Directory: $FileDir$
+
+使用CMake生成时在build.gradle中加入以下代码
+  externalNativeBuild {
+    cmake {
+      abiFilters  'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+      path file('CMakeLists.txt')
+    }
+  }
+

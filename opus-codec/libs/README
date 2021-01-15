@@ -1,0 +1,7 @@
+此处使用的lib库为用src中代码生成的lib库（用ndk或cmake生成都可）
+  sourceSets {
+    main {
+      jniLibs.srcDirs = ['libs']
+    }
+  }
+ build中使用此方法时，放在此处，否则可以放到src/main下的jniLibs文件夹中
